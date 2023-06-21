@@ -7,3 +7,8 @@ const pregame = (() => {
 
 
 })();
+
+
+function playgame (){
+    
+}
