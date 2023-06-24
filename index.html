@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
 
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe</title>
-    <link rel="stylesheet" href="style.css" ></link>
+    <link rel="stylesheet" href="style.css">
 
 </head>
+
 <body>
-    <header>
-        <h1>Tic-Tac-Toe</h1>
-    </header>
-    <container>
-        <input type="text" placeholder="Player1" id="player1">
-        <input type="text" placeholder="Player2" id="player2">
+    <div id="inputSection">
+        <input type="text" placeholder="Player X" id="player1">
+        <input type="text" placeholder="Player O" id="player2">
+        <button class="start_btn">Start</button>
+    </div>
 
+    <div id="gameSection" style="display: none;" >
+        <div id="playerDisplay">0:0</div>
 
-        <button id="start">Start</button>
+        <div id="scoreDisplay"></div>
 
+        <div class="playground">
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+            <div class="field"></div>
+        </div>
+        <button id="reset_Btn">Reset</button>
+    </div>
 
-    </container>
+    <div id="winnerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <p id="winnerText"></p>
+        </div>
+    </div>
 
-    
-
-
-
-    
     <script type="text/javascript" src="main.js"></script>
 </body>
+
 </html>
