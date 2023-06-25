@@ -10,17 +10,22 @@
 </head>
 
 <body>
+
     <div id="inputSection">
+        <h1>TIC-<span>TAC</span>-TOE</h1>
         <input type="text" placeholder="Player X" id="player1">
+        <br>
         <input type="text" placeholder="Player O" id="player2">
+        <br>
         <button class="start_btn">Start</button>
     </div>
 
-    <div id="gameSection" style="display: none;" >
-        <div id="playerDisplay">0:0</div>
+    <div id="gameSection" style="display: none;">
+       <div class="play_scor_box">
+        <div id="playerDisplay"></div>
 
         <div id="scoreDisplay"></div>
-
+        </div>  
         <div class="playground">
             <div class="field"></div>
             <div class="field"></div>
@@ -32,13 +37,12 @@
             <div class="field"></div>
             <div class="field"></div>
         </div>
-        <button id="reset_Btn">Reset</button>
-    </div>
+        <div class="btn_box">
 
-    <div id="winnerModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <p id="winnerText"></p>
+            <button id="newGame_btn">New game</button>
+
+            <button id="reset_Btn">Reset</button>
+
         </div>
     </div>
 
