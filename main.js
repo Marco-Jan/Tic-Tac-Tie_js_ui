@@ -155,7 +155,7 @@ function resetGame() {
 
     currentPlayer = players[0];
     gameActive = true;
-    gamemode(currentPlayer, gameActive); // Aktualisierung des aktuellen Spielers und Fortsetzung des Spiels
+    gamemode(currentPlayer, gameActive); 
 }
 
 
@@ -191,7 +191,7 @@ function gamemode(currentPlayer, gameActive) {
                     });
                 }, 0);
             } else {
-                currentPlayer = currentPlayer === players[0] ? players[1] : players[0]; // Spieler wechseln nach dem Zug
+                currentPlayer = currentPlayer === players[0] ? players[1] : players[0]; 
             }
         }
     }
@@ -202,12 +202,12 @@ function gamemode(currentPlayer, gameActive) {
 }
 
 // Initialisierung der Punktzahl
-const score = [0, 0]; // Außerhalb der Funktion deklarieren
+const score = [0, 0]; 
 
 function updateScore(playerIndex) {
-    score[playerIndex]++; // Erhöhe den Punktestand des Spielers
+    score[playerIndex]++; 
     const scoreDisplay = document.getElementById('scoreDisplay');
-    scoreDisplay.textContent = score.join(':'); // Aktualisiere die Anzeige des Punktestands
+    scoreDisplay.textContent = score.join(':'); 
 }
 
 
