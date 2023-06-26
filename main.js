@@ -1,4 +1,4 @@
-function getInputNames_openG() {
+function getInputNames() {
     const inputElements = document.querySelectorAll('#inputSection input');
     const inputNames = [];
 
@@ -22,16 +22,16 @@ function newGame() {
 
     // Zeige den Eingabebereich an und verstecke den Spielbereich
     resetGame();
-    inputSection.style.display = 'flex ';
+    inputSection.style.display = 'flex';
     inputSection.style.transition = 'all 2s linear;';
     gameSection.style.display = 'none';
 
-    // Lösche die Spielerdaten und das Anzeigefeld
+    // Löschz die Spielerdaten und das Anzeigefeld
     players.length = 0;
     playerDisplay.textContent = '';
     scoreDisplay.textContent = '';
 
-    // Setze das Spielfeld zurück
+    // Setzt das Spielfeld zurück
     gamefield.forEach(field => {
         field.innerText = '';
         field.style.background = '';
@@ -44,7 +44,7 @@ function newGame() {
 const startBtn = document.querySelector('.start_btn');
 startBtn.addEventListener('click', () => {
     console.log('Start button clicked');
-    const inputNames = getInputNames_openG();
+    const inputNames = getInputNames();
     const inp_section = document.getElementById('inputSection');
     const playGround = document.getElementById('gameSection');
     let isEmptyName = false;
@@ -64,7 +64,9 @@ startBtn.addEventListener('click', () => {
 
     inp_section.style.display = 'none';
     inp_section.style.transition = 'all 2s linear;';
-    playGround.style.display = 'block';
+    playGround.style.display = 'flex';
+    playGround.style.flexDirection= 'column';
+    playGround.style.justifyContent= 'center';
 
     const displayNames = inputNames.join(' vs ');
     playerDisplay.textContent = displayNames;
@@ -76,6 +78,7 @@ startBtn.addEventListener('click', () => {
 
     gamemode(currentPlayer, gameActive);
 });
+//objekt Player Factory
 
 const Player = (name, sign) => {
     let won = false;
